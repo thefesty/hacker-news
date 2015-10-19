@@ -1,0 +1,1 @@
+angular.module("app").run(["$templateCache", function($templateCache) {$templateCache.put("app/news-list/news-list.html","<p>News List</p>\n<p>\n  List\n</p>\n");}]);
