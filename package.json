@@ -6,7 +6,7 @@
   "repository": "https://github.com/thefesty/hacker-news",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^0.6.1",
+    "http-server": "^0.6.1"
   },
   "scripts": {
     "start": "http-server -a localhost -p 8000 -c-1"
