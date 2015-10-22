@@ -64,7 +64,6 @@ angular.module('app.newsItemList', ['ngRoute', 'app.newsItem', 'app.newsUser'])
 	$this.loadNewsItems = function() {
 		$this.loading = true;
 		$this.loadingError = false;
-		console.log('load', $this.currentConfig);
 		try {
 			NewsItemListService($this.currentConfig).then(function(newsItemList) {
 				$this.newsItemList = newsItemList;

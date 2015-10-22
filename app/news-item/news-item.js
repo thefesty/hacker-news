@@ -27,14 +27,12 @@ angular.module('app.newsItem', ['ngRoute'])
 		newsItems = newsItems || [];
 
 		return $http.get('https://hacker-news.firebaseio.com/v0/item/' + newsItemId + '.json').then(function(response) {
-			console.log(response.data);
 			if (allowedItemType(response.data, config.allowedTypes))
 				newsItems.push(response.data);
 
 			if (!isNumberOfItemsToReturnReached(newsItems, config) && newsItemIds.length) {
 				return getNewsItems(newsItemIds, config, newsItems);
 			} else {
-				console.log('newsItems', newsItems);
 				return newsItems;
 			}
 		});
