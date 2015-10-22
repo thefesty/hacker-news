@@ -1,12 +1,6 @@
 'use strict';
 
-angular.module('app.newsUser')
-
-// .controller('NewsUserController', ['NewsItemListService', function(NewsItemListService) {
-// 	NewsItemListService(10).then(function(newsItemList) {
-// 		console.log(newsItemList);
-// 	});
-// }])
+angular.module('app.newsUser', ['ngRoute'])
 
 .service('NewsUserService', ['$http', function($http) {
 	return function(newUserId) {

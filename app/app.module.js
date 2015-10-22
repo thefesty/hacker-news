@@ -2,5 +2,7 @@
 
 angular.module('app', [
 	'ngRoute',
+	'ngAnimate',
+	'ui.bootstrap',
 	'app.newsItemList'
 ]);
