@@ -8,9 +8,14 @@ The application is build using AngularJS and Bootstrap.
 ## API's
 The application uses the following API's.
 
-- https://hacker-news.firebaseio.com/v0/topstories.json
-- https://hacker-news.firebaseio.com/v0/item/[id].json
-- https://hacker-news.firebaseio.com/v0/user/[id].json
+Top 500 item id's
+https://hacker-news.firebaseio.com/v0/topstories.json
+
+All item properties (replace [id] with item id)
+https://hacker-news.firebaseio.com/v0/item/[id].json
+
+All user properties (replace [id] with username)
+https://hacker-news.firebaseio.com/v0/user/[id].json
 
 ## Application Logic
 The following describes the steps involed in genrating the list of items, which is displayed to the user.
