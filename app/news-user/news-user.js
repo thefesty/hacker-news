@@ -4,10 +4,8 @@ angular.module('app.newsUser', ['ngRoute'])
 
 .service('NewsUserService', ['$http', function($http) {
 	return function(newUserId) {
-		return $http({
-			method: 'GET',
-			url: 'https://hacker-news.firebaseio.com/v0/user/' + newUserId + '.json'
-		}).then(function (response) {
+		return $http.get('https://hacker-news.firebaseio.com/v0/user/' + newUserId + '.json').then(function (response) {
+			console.log('Retrieved user', response.data);
 			return response.data;
 		})
 	};

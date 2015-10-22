@@ -5,6 +5,7 @@ angular.module('app.newsItem', ['ngRoute'])
 .service('TopNewsItemIdsService', ['$q', '$http', function($q, $http) {
 	return function () {
 		return $http.get('https://hacker-news.firebaseio.com/v0/topstories.json').then(function(response) {
+			console.log('Retrieved item ids', response.data);
 			return response.data;
 		});
 	}	
@@ -27,6 +28,7 @@ angular.module('app.newsItem', ['ngRoute'])
 		newsItems = newsItems || [];
 
 		return $http.get('https://hacker-news.firebaseio.com/v0/item/' + newsItemId + '.json').then(function(response) {
+			console.log('Retrieved item', response.data);
 			if (allowedItemType(response.data, config.allowedTypes))
 				newsItems.push(response.data);
 
